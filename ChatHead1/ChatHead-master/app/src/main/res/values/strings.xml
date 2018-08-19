@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ChatHead</string>
+    <string name="button_text_show_chat_head">Show chat head</string>
+</resources>

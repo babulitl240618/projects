@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bgray">#E2E2E2</color>
+    <color name="blue_transparent"> #00A0FE</color>
+    <color name="blue_transparent1">#FF03A9F4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white1">#FFFFFFFF</color>
+    <color name="white2">#F2FFFFFF</color>
+    <color name="white3">#A3FFFFFF</color>
+    <color name="asa">#767676</color>
+    <color name="asa1">#FFECEFF1</color>
+    <color name="asa2"> #FF546E7A</color>
+    <color name="akasi">#7DEFCD</color>
+    <color name="asabase">#ECEFF1</color>
+    <color name="listview">#EFEFEF</color>
+    <color name="txtGray">#c6cbca</color>
+    <color name="black">#DE000000</color>
+    <color name="black1">#FF000000</color>
+    <color name="black2">#F0000000</color>
+    <color name="black3">#8A000000</color>
+    <color name="black4">#52000000</color>
+    <color name="black5">#3D000000</color>
+    <color name="black6">#5C000000</color>
+    <color name="drawer_background_blue">#152940</color>
+    <color name="signin_background">#FAFAFA</color>
+
+    <color name="black_transparent">#40000000</color>
+
+</resources>

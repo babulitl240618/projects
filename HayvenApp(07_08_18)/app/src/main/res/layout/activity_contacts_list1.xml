@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@color/white1"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+      android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/star_icon"/>
+    <LinearLayout
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/imgProfil"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/fajlehrabbi1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="18dp"
+                android:textSize="10sp"
+                android:paddingLeft="4dp"
+                android:textColor="@color/white"
+                android:paddingRight="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:background="@drawable/round_corner_blue"
+                android:text="NAV"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant"
+                android:textSize="16sp"
+                android:text="Fajleh Rabbi"
+                android:textColor="@color/black2"/>
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant"
+                android:textColor="@color/black3"
+                android:textSize="14sp"
+                android:text="The ArrayAdapter will .."/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="13px"
+        android:background="@color/asabase"/>
+-->
+</LinearLayout>

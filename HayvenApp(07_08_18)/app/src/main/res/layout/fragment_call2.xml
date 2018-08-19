@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="@color/asa1"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:background="@color/white1"
+            android:weightSum="7"
+            >
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search Chats"
+                android:drawablePadding="10dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/assistant"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/search_black"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black5"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="6">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/asabase"/>
+                <ImageView
+                    android:id="@+id/imgNewchat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/new_call_black" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_layCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@color/asa1">
+
+
+            <TextView
+                android:id="@+id/textallchats1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text=" Chats"
+                android:fontFamily="@font/work_sans"
+                android:textColor="@color/txtGray"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:id="@+id/textallcalls1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Calls"
+                android:fontFamily="@font/work_sans_black"
+                android:gravity="center"
+                android:textSize="32dp"
+                android:textColor="@color/black1"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:dividerHeight="5dp">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "829659281512",
+    "firebase_url": "https://hayven-app.firebaseio.com",
+    "project_id": "hayven-app",
+    "storage_bucket": "hayven-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829659281512:android:21c6d9ad73da4685",
+        "android_client_info": {
+          "package_name": "com.imagine.bd.hayvenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829659281512-qtoni5dj32rgggl18srf8ef54nbj7pdv.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "829659281512-qtoni5dj32rgggl18srf8ef54nbj7pdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQfx5HP4OV6h8ETvNV7H3sYIyn0E6HrBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

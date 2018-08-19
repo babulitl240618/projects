@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:background="@color/white"
+android:layout_alignParentBottom="true"
+android:weightSum="6">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/connect_black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:textSize="12sp"
+        android:gravity="center"/>
+
+
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/ll_contact"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:padding="3dp"
+    android:layout_weight="1">
+    <ImageView
+        android:id="@+id/imgContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/contacts_black"/>
+    <TextView
+        android:id="@+id/txtConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Contact"/>
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    android:padding="3dp"
+    android:layout_weight="2">
+
+    <ImageView
+        android:id="@+id/imgLauncher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hayven_green">
+
+    </ImageView>
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:padding="3dp"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/notifications_black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Notification"/>
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:padding="3dp"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/more_black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="More"/>
+
+
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="@color/asabase"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search Chats"
+                android:drawablePadding="10dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/search_black"
+                android:layout_centerVertical="true"
+                android:textColor="@color/asa"
+                />
+
+        <ImageView
+            android:id="@+id/imgNewchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/new_chat_black"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp" />
+
+           </RelativeLayout>
+
+      <!--  <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/search_black" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:text="Search Chats"
+                android:textColor="@color/asa"
+                android:layout_marginLeft="69dp" />
+
+            <ImageView
+                android:id="@+id/imgNewchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/new_chat_black"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp" />
+
+
+
+        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@color/asabase">
+
+
+            <TextView
+                android:id="@+id/textallchats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" Chats"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textallcalls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Calls"
+                android:gravity="center"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/listChats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:dividerHeight="5dp">
+
+        </ListView>
+
+        <ListView
+            android:id="@+id/listCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:dividerHeight="5dp">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="9"
+            android:background="@color/white"
+            android:weightSum="7">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/connect_black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/imgContacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/contacts_black"/>
+                <TextView
+                    android:id="@+id/txtConnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Contact"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/imgLauncher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hayven_green">
+
+                    </ImageView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/notifications_black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Notification"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more_black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="More"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</LinearLayout>

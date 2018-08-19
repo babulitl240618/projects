@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="2">
+            <ImageView
+                android:id="@+id/imgProfil"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/fajlehrabbi1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"
+                android:textSize="10sp"
+                android:paddingLeft="4dp"
+                android:textColor="@color/white"
+                android:paddingRight="4dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:background="@drawable/round_corner_blue"
+                android:text="NAV"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/assistant"
+                android:textSize="16sp"
+                android:text="Fajleh Rabbi"
+                android:textColor="@color/black2"/>
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black3"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:text="The ArrayAdapter will .."/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="9.58am"
+                android:fontFamily="@font/assistant"
+                android:textSize="13sp"
+                android:textColor="@color/black4"/>
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/round_corner_blue"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
