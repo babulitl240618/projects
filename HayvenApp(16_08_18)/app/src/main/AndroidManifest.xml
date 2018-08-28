@@ -20,10 +20,12 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
 
 
     <!--for Samsung-->
-    <uses-permission      android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
 
     <!--for htc-->
@@ -161,6 +163,12 @@
             android:name=".Trello.activity.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme"></activity>
+
+        <activity android:name=".ChatHead.MyDialog" android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name=".ChatHead.ChatHeadService"></service>
+        <activity android:name=".ChatHead.Main" />
     </application>
 
 </manifest>

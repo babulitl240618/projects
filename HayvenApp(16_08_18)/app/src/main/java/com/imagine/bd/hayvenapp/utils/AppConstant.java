@@ -24,6 +24,10 @@ public class AppConstant {
     public static String userId = "userId";
     public static String userDesignation = "userDesignation";
     public static String userImg = "userImg";
+    //chat head
+    public static String userImgChatHead = "userImgChatHead";
+    public static String userTextChatHead = "userTextChatHead";
+
     public static String userPhoto = "userPhoto";
     public static String firebaseFriendId = "firebaseFriendId";
 

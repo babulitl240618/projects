@@ -17,6 +17,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -63,6 +64,9 @@ import com.imagine.bd.hayvenapp.Adapter.ChatsUserAdapter;
 import com.imagine.bd.hayvenapp.Adapter.ChatsWorkbaseUserAdapter;
 import com.imagine.bd.hayvenapp.AppRTCClient;
 import com.imagine.bd.hayvenapp.CallActivity;
+import com.imagine.bd.hayvenapp.ChatHead.ChatHeadService;
+import com.imagine.bd.hayvenapp.ChatHead.Main;
+import com.imagine.bd.hayvenapp.ChatHead.Utils;
 import com.imagine.bd.hayvenapp.Database.MyDbHelper;
 import com.imagine.bd.hayvenapp.MainActivity2;
 import com.imagine.bd.hayvenapp.Model.ChatUserInfo;
@@ -97,6 +101,9 @@ import static org.webrtc.ContextUtils.getApplicationContext;
 
 
 public class HomeFragment extends Fragment {
+    public static int OVERLAY_PERMISSION_REQ_CODE_CHATHEAD = 1234;
+    public static int OVERLAY_PERMISSION_REQ_CODE_CHATHEAD_MSG = 5678;
+
     private Context con;
     private static final String TAG = "ConnectActivity";
     private static final int CONNECTION_REQUEST = 1;
@@ -615,7 +622,7 @@ public class HomeFragment extends Fragment {
                         if ((tempArrayList1 != null)) {
                             PersistData.setStringData(con, AppConstant.friend_name, tempArrayList1.get(position).getSender_name());
                             PersistData.setStringData(con, AppConstant.reciverid, findIdByName(tempArrayList1.get(position).getSender_name()));
-                            startActivity(new Intent(con, ChattingActivity.class));
+                            startActivity(new Intent(con, CallInfoActivity.class));
 
                             Log.e("name", "");
                         } else {
@@ -624,7 +631,7 @@ public class HomeFragment extends Fragment {
 
                             PersistData.setStringData(con, AppConstant.friend_name,conversationList.get(position).getSender_name());
                             PersistData.setStringData(con, AppConstant.reciverid, findIdByName(conversationList.get(position).getSender_name()));
-                            startActivity(new Intent(con, ChattingActivity.class));
+                            startActivity(new Intent(con, CallInfoActivity.class));
                         }
 
                     }
@@ -1608,6 +1615,16 @@ public class HomeFragment extends Fragment {
                                 Log.e("ccc", "list size a " + conversationList.size());
                                 Log.e("ccc", "unread l " + conversationList.get(i).getTotalUnread());
 
+                                //chat head
+
+                                if(Utils.canDrawOverlays(con)) {
+                                    startChatHead();
+                                    PersistData.setStringData(con, AppConstant.userImgChatHead, chatuserInfo1.getSender_img());
+                                    PersistData.setStringData(con, AppConstant.userTextChatHead, chatuserInfo1.getMsg_body());
+                                }
+                                else{
+                                    requestPermission(OVERLAY_PERMISSION_REQ_CODE_CHATHEAD);
+                                }
 
                                 PersistData.setStringData(con, AppConstant.lastConversation_id, msg_conv_id);
 
@@ -1635,4 +1652,68 @@ public class HomeFragment extends Fragment {
         }
     };
 
+
+    private void startChatHead(){
+        con.startService(new Intent(con, ChatHeadService.class));
+    }
+    private void showChatHeadMsg(){
+        java.util.Date now = new java.util.Date();
+        String str = "test by henry  " + new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(now);
+
+        Intent it = new Intent(con, ChatHeadService.class);
+        it.putExtra(Utils.EXTRA_MSG, str);
+        con.startService(it);
+    }
+
+    private void needPermissionDialog(final int requestCode){
+        AlertDialog.Builder builder = new AlertDialog.Builder(con);
+        builder.setMessage("You need to allow permission");
+        builder.setPositiveButton("OK",
+                new android.content.DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // TODO Auto-generated method stub
+                        requestPermission(requestCode);
+                    }
+                });
+        builder.setNegativeButton("Cancel", new android.content.DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
+    }
+
+
+
+    private void requestPermission(int requestCode){
+        Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+        intent.setData(Uri.parse("package:" + con.getPackageName()));
+        startActivityForResult(intent, requestCode);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        System.out.println(requestCode);
+        if (requestCode == OVERLAY_PERMISSION_REQ_CODE_CHATHEAD) {
+            if (!Utils.canDrawOverlays(con)) {
+                needPermissionDialog(requestCode);
+            }else{
+                startChatHead();
+            }
+
+        }else if(requestCode == OVERLAY_PERMISSION_REQ_CODE_CHATHEAD_MSG){
+            if (!Utils.canDrawOverlays(con)) {
+                needPermissionDialog(requestCode);
+            }else{
+                showChatHeadMsg();
+            }
+
+        }
+
+    }
 }
